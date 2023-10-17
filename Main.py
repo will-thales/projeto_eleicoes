@@ -9,7 +9,7 @@ import os.path
 
 import numpy as np
 import pandas as pd
-import json
+import json 
 from operator import itemgetter
 import openpyxl
 import sqlalchemy
@@ -63,6 +63,7 @@ dados_partido= dict(zip(dados_partido["NR_PARTIDO"].unique(),dados_partido['SG_P
 
 #=========================INICIO DA CRIAÇÃO DO DASHBOARD ============================================================
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.CYBORG])
+server = app.server
 
 #=========================== GRAFICO DO MAPA ===================================================================
 fig = px.scatter_mapbox(dados_votos,
